@@ -1,4 +1,4 @@
-### RbxAlts Premium Generator API ###
+# RbxAlts Premium Generator API
 A generator API inspired by PSU Obfuscator API, It's pretty simple!
 
 Unfortunately this is only for Premium users due to Xyba only wanting premium users to generate accounts in the discord server
@@ -12,5 +12,4 @@ Generator API features:
  If the cooldown is above 3 minutes, Don't use the selfbot
 # WARNING
 *XYBA DID NOT GIVE ME PERMISSION TO USE THIS, I was banned 24 Hours after using it.*
-# WARNING
 *THIS IS A SELFBOT, ITS COULD POSSIBLE GET YOU BANNED!*
