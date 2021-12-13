@@ -22,27 +22,31 @@ async def on_ready():
 {Fore.GREEN}▀▄▄▄▄▄▀▄▄▄▄▄▀▄▄▄▀▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▀▄▄▀▀▄▄▄▀▀▄▄▄▄▀▄▄▀▄▄▀▀▀▄▄▀▄▄▀▄▄▄▀▀▀▄▄▄▀{Fore.WHITE}
 
 Generator API by: Disguised Fox
-This is souly for RbxAlts discord server, Xyba didn't give me permission to do this
+This is souly for RbxAlts discord server, Xyba didn't give me permission to make this, The Auto API is bannable, 24 hours after using it I was banned.
+I might make one using ChromeDriver
 Use {Fore.RED}-gen{Fore.WHITE} anywhere!
 """)
 @bot.command()
 async def api(ctx):
-    channel = bot.get_channel(768628142662352907)
-    delay = channel.slowmode_delay
-    await channel.send('-gen')
-    await ctx.send(f'Account Generated! Check your DMs with **RBXALTS Premium**\n\nYour on a {delay} second cooldown, Please wait.')
-    time.sleep(delay)
-    async with aiohttp.ClientSession() as session:
-        webhook = config.get('webhook')
-        webhook = Webhook.from_url({webhook}, adapter=AsyncWebhookAdapter(session))
-        await webhook.send(f"<@!{bot.user.id}>, Cooldown's over.")
+    try:
+        channel = bot.get_channel() # replace this with the Generate Account channel ID, I got banned and forgot to save mine.
+        delay = channel.slowmode_delay
+        await channel.send('-gen')
+        await ctx.send(f'Account Generated! Check your DMs with **RBXALTS Premium**\n\nYour on a {delay} second cooldown, Please wait.')
+        time.sleep(delay)
+        async with aiohttp.ClientSession() as session:
+            webhook = config.get('webhook')
+            webhook = Webhook.from_url(f"{webhook}", adapter=AsyncWebhookAdapter(session))
+            await webhook.send(f"<@!{bot.user.id}>, Cooldown's over.")
+    except:
+        await ctx.send("There was an error and we couldn't generate the account.")
 @bot.command()
 async def auto_api(ctx):
     autoAPI = True
     await ctx.send("Possible may get you banned.\n\n*Activated Auto API*.")
     if autoAPI == True:
         while True:
-            channel = bot.get_channel(768628142662352907)
+            channel = bot.get_channel() # replace this with the Generate Account channel ID, I got banned and forgot to save mine.
             delay = channel.slowmode_delay
             await channel.send('-gen')
             print(f'Account Generated! Check your DMs with **RBXALTS Premium**\n\nYour on a {delay} second cooldown, Please wait.')
