@@ -12,4 +12,4 @@ Generator API features:
  If the cooldown is above 3 minutes, Don't use the selfbot
 # WARNING
 *XYBA DID NOT GIVE ME PERMISSION TO USE THIS, I was banned 24 Hours after using it.*
-*THIS IS A SELFBOT, ITS COULD POSSIBLE GET YOU BANNED!*
+*THIS IS A SELFBOT, USING IT COULD POSSIBLY GET YOU BANNED!*
